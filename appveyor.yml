@@ -1,11 +1,23 @@
 image: node
-build_script:
+
+environment:
+  matrix:
+    - nodejs_version: "18"
+
+install:
+  - ps: Install-Product node $env:nodejs_version
   - npm install
+
+build_script:
   - npm run build
+
 artifacts:
   - path: dist
+
 deploy:
   provider: GitHubPages
   artifact: dist
+  auth_token:
+    secure: %GITHUB_TOKEN%
   on:
     branch: main
