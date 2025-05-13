@@ -1,0 +1,23 @@
+{
+  "name": "dom-game",
+  "version": "1.0.0",
+  "description": "Goblin move game",
+  "scripts": {
+    "start": "webpack serve --open",
+    "build": "webpack --mode production",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-loader": "^8.0.0",
+    "css-loader": "^6.0.0",
+    "eslint": "^8.0.0",
+    "html-webpack-plugin": "^5.0.0",
+    "jest": "^29.0.0",
+    "style-loader": "^3.0.0",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0",
+    "webpack-dev-server": "^4.0.0"
+  }
+}

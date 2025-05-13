@@ -1,0 +1,20 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(4, 100px);
+  gap: 5px;
+  margin: 50px auto;
+  width: 420px;
+}
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.goblin {
+  width: 80px;
+  height: 80px;
+}
