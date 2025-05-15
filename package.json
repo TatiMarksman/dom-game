@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "webpack serve --open",
-    "build": "webpack --mode production",
+    "build": "npx webpack --mode production",
     "test": "jest",
     "lint": "eslint src --ext .js"
   },
