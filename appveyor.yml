@@ -1,9 +1,13 @@
 image: node
+
 build_script:
   - npm install
+  - npm run test
   - npm run build
+
 artifacts:
   - path: dist
+
 deploy:
   provider: GitHubPages
   artifact: dist
