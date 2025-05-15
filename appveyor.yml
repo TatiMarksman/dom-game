@@ -8,10 +8,12 @@ install:
   - npm install
 
 build_script:
-  - npm run build
+  - chmod +x ./node_modules/.bin/webpack
+  - npx webpack --mode production
 
 test_script:
-  - npm test
+  - chmod +x ./node_modules/.bin/jest
+  - npx jest
 
 artifacts:
   - path: dist
