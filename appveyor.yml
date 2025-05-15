@@ -1,9 +1,17 @@
 image: node
 
-build_script:
+environment:
+  GITHUB_TOKEN:
+    secure: your_encrypted_token_here
+
+install:
   - npm install
-  - npm run test
+
+build_script:
   - npm run build
+
+test_script:
+  - npm test
 
 artifacts:
   - path: dist
@@ -11,5 +19,7 @@ artifacts:
 deploy:
   provider: GitHubPages
   artifact: dist
+  auth_token:
+    secure: zhwEyed+swVmmA5wfoORHAVd2uU5USSKgphUnxEu/2ldbMUuvmyRttlaYfTClf8o
   on:
     branch: main
